@@ -8,12 +8,12 @@ take the last stone from the last pile, you lose the game.
 Display
 
 ### The list below includes the essential elements of the page.
-● A fun display with some images of unK and glooB and maybe some stones.
-● A display for each pile of stones, including the number of stones currently in the pile.
-● A button for each pile that allows the user to take a stone from that pile.
-● A display for unK and glooB’s comments about your gameplay.
-● A reset button.
-● A “How to Play” section.
+* A fun display with some images of unK and glooB and maybe some stones.
+* A display for each pile of stones, including the number of stones currently in the pile.
+* A button for each pile that allows the user to take a stone from that pile.
+* A display for unK and glooB’s comments about your gameplay.
+* A reset button.
+* A “How to Play” section.
 
 ## Functionality
 unK and glooB will play as a team (it’s a 2-player game). glooB does all of the decision making,
