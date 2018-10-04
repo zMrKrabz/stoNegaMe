@@ -31,3 +31,7 @@ and the game will start over.
 Note: This program is not linear and it cannot be treated as a simple click and respond. You
 have to juggle the user’s turn (click and respond) with the computer’s turn (automatic) and
 display the output as appropriate so that a person playing the game can follow the game.
+
+## TODO
+* Do a lot more testing
+* Call the arrow functions, to assign the variables. 
