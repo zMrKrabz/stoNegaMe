@@ -19,21 +19,21 @@ function main(ele){
         switch(ele){
             // Validates if pile is true
             case '1':
-                if (pile1 in piles){
+                if (piles.indexOf(pile1) != -1){
                     return pile1;
                 } else {
                     return valid;
                 };
             
             case '2':
-                if(pile2 in piles){
+                if(piles.indexOf(pile2) != -1){
                     return pile2;
                 } else {
                     return valid;
                 };
             
             case '3':
-                if (pile3 in piles){
+                if (piles.indexOf(pile3) != -1){
                     return pile3;
                 } else {
                     return valid;
@@ -44,6 +44,8 @@ function main(ele){
             };
     }
 
+    
+
     // validator
     pile = pile(ele)
     if (pile){
@@ -52,18 +54,24 @@ function main(ele){
             piles.splice(piles.indexOf[pile], 1)
         } // deletes from list if less than 1
         let pileE = (pile) => {
+            console.log("hi")
+            // doesn't work past this line
             switch (pile){
-                case pile == pile1: return pile1E;
-                case pile == pile2: return pile2E;
-                case pile == pile3: return pile3E;
+                case pile = pile1: return pile1E;
+                case pile = pile2: return pile2E;
+                case pile = pile3: return pile3E;
+                default: return "hey";
             };
         };
 
-        pileE(pile).innerHTMl=pile;
+        // switch statement return undefined, doesn't seem cases are working
+        pileEL = pileE(pile)
+        console.log(pileEL)
+        pileEL.innerHTMl=pile;
 
         gameOrder.push('user');
         let endgame = () => {
-            if (piles = []){
+            if (piles == []){
                 switch (gameOrder.pop()){
                     case 'user':
                         return "User";
@@ -75,11 +83,8 @@ function main(ele){
             };
         };
 
-        // lines 60 thru lines 70 always returns true
-        // should return false
-
         if (endgame()){
-            console.log('The winner is ' + endgame)
+            console.log('The winner is ' + endgame())
             return true;
         }
 
@@ -88,7 +93,7 @@ function main(ele){
         setTimeout(foo(), 3000);
 
         if (endgame()){
-            console.log('The winner is ' + endgame)
+            console.log('The winner is ' + endgame())
             return true;
         }
     }
@@ -98,7 +103,7 @@ function foo(){
     // Chooses random pile from piles list. This avoids the need to check the pile, because
     // everything in the list is at least 1. Checkpile is only used after, so it can modify
     // the list.
-    let randpile = pile[Math.floor(Math.random()*pile.length)];
+    let randpile = piles[Math.floor(Math.random()*piles.length)];
 
     // Identifies what element is currently being used
     let pileE = (randpile) => {
