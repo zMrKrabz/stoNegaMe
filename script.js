@@ -45,6 +45,7 @@ function main(ele){
     }
 
     // validator
+    pile = pile(ele)
     if (pile){
         pile--;
         if (pile < 1){
@@ -57,6 +58,9 @@ function main(ele){
                 case pile == pile3: return pile3E;
             };
         };
+
+        pileE(pile).innerHTMl=pile;
+
         gameOrder.push('user');
         let endgame = () => {
             if (piles = []){
@@ -74,7 +78,7 @@ function main(ele){
         // lines 60 thru lines 70 always returns true
         // should return false
 
-        if (endgame){
+        if (endgame()){
             console.log('The winner is ' + endgame)
             return true;
         }
@@ -83,7 +87,7 @@ function main(ele){
         
         setTimeout(foo(), 3000);
 
-        if (endgame){
+        if (endgame()){
             console.log('The winner is ' + endgame)
             return true;
         }
@@ -105,7 +109,7 @@ function foo(){
         };
     };
     randpile--;
-    pileE.innerHTMl=randpile;
+    pileE(randpile).innerHTMl=randpile;
     checkPile(randpile);
     gameOrder.push("bot");
 };
