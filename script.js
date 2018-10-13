@@ -52,8 +52,7 @@ function main(ele){
     
 
     // validator
-    pile = pile(ele)
-    console.log(pile)
+    pile = pile(ele);
     if (pile){
         let pileE = (pile) => {
             console.log(pile)
@@ -68,8 +67,6 @@ function main(ele){
 
         // switch statement return undefined, doesn't seem cases are working
         pileEL = pileE(ele)
-        console.log(pileEL)
-        
         pile--;
         if (pile < 1){
             piles.splice(piles.indexOf[pile], 1);
@@ -94,11 +91,12 @@ function main(ele){
         if (endgame()){
             console.log('The winner is ' + endgame())
             return true;
-        }
+        };
 
         // line 77 thru line 80 logs the function instead of 'bot' or 'user'
         
         setTimeout(foo(), 3000);
+        console.log(gameOrder);
 
         if (endgame()){
             console.log('The winner is ' + endgame())
@@ -121,9 +119,20 @@ function foo(){
             case 'pile3': return pile3E;
         };
     };
-    randpile--;
-    pileE(randpile).innerHTMl=randpile;
-    checkPile(randpile);
+
+    let pile = (randpile) => {
+        switch (randpile){
+            case 'pile1': return pile1;
+            case 'pile2': return pile2;
+            case 'pile3': return pile3;
+        };
+    };
+
+    pile = pile(randpile);
+    pileE = pileE(randpile);
+    checkPile(pile);
+    pile--;
+    pileE.innerHTMl=pile;
     gameOrder.push("bot");
 };
 
