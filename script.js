@@ -35,15 +35,12 @@ function main(ele){
             
             case '3':
                 if (piles.indexOf(pile3) != -1){
-                    console.log(ele);
-                    console.log(pile3);
                     return pile3;
                 } else {
                     return valid;
                 };
             
             default: 
-                console.log(ele);
                 return valid;
     
             };
@@ -55,7 +52,6 @@ function main(ele){
     pile = pile(ele);
     if (pile){
         let pileE = (pile) => {
-            console.log(pile)
             // doesn't work past this line
             switch (ele){
                 case '1': return pile1E;
@@ -66,13 +62,13 @@ function main(ele){
         };
 
         // switch statement return undefined, doesn't seem cases are working
-        pileEL = pileE(ele)
+        pileEL = pileE(ele);
         pile--;
         if (pile < 1){
             piles.splice(piles.indexOf[pile], 1);
         }; // deletes from list if less than 1
 
-        pileEL.innerHTMl=pile;
+        pileEL.innerHTML=pile;
 
         gameOrder.push('user');
         let endgame = () => {
@@ -132,7 +128,9 @@ function foo(){
     pileE = pileE(randpile);
     checkPile(pile);
     pile--;
-    pileE.innerHTMl=pile;
+    console.log(pile);
+    console.log(pileE)
+    pileE.innerHTML=pile;
     gameOrder.push("bot");
 };
 
