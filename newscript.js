@@ -43,21 +43,26 @@ function main(ele){
     };
 
     pile = pile(ele);
-    pile.innerHTML = cpile;
-    gameOrder.push('user');
 
-    console.log(piles);
-
-    if (testZero()){
-        console.log(`the game has ended. ${gameOrder.pop()} has won`)
-    };
-
-    urk();
-
-    if (testZero()){
-        console.log(`the game has ended. ${gameOrder.pop()} has won`)
-    };
-
+    if (pile){
+        pile.innerHTML = cpile;
+        gameOrder.push('user');
+    
+        console.log(piles);
+    
+        if (testZero()){
+            console.log(`the game has ended. ${gameOrder.pop()} has won`)
+        };
+    
+        urk();
+    
+        if (testZero()){
+            console.log(`the game has ended. ${gameOrder.pop()} has won`)
+        };
+        
+    } else{
+        console.log("Invalid")
+    }
 };
 
 function urk(){
@@ -93,15 +98,13 @@ function urk(){
 };
 
 function testZero(){
-    // will say that everything in the list is 0. Then, uses the for loop to 
-    // prove that it isn't all 0. If it cannot prove that it is all 0,
-    // it will return that all the values are 0.
-    let allZero = 1;
-    for (i=0;i < piles.length; ++i){
-        if (piles[i] !== 0){
-            allZero--;
-            break;
-        };
+    // Throws in a random element. If the value strictly equals 0, it will return true.
+    // If it doesn't equal 0, it will return false
+    let check = (element) => {
+        return element === 0;
     };
+
+    let allZero = piles.every(check);
+
     return allZero;
 };
