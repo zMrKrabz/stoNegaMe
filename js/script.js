@@ -37,7 +37,7 @@ function main(ele){
                 } else {
                     return false;
                 };
-
+                
             default: console.log("I'm broken");
         };
     };
@@ -51,16 +51,17 @@ function main(ele){
         console.log(piles);
     
         if (testZero()){
-            console.log(`the game has ended. ${gameOrder.pop()} has won`)
+            console.log(`the game has ended. ${gameOrder[gameOrder.length -2]} has won`)
+            return true;
         };
     
         urk();
     
         if (testZero()){
-            console.log(`the game has ended. ${gameOrder.pop()} has won`)
+            console.log(`the game has ended. ${gameOrder[gameOrder.length -2]} has won`)
+            return true;
         };
-        
-    } else{
+    } else {
         console.log("Invalid")
     }
 };
@@ -92,7 +93,6 @@ function urk(){
                 return pile3E;
         };
     };
-
     pileE(pile).innerHTML=cpile;
     gameOrder.push("urk")
 };
@@ -103,8 +103,6 @@ function testZero(){
     let check = (element) => {
         return element === 0;
     };
-
     let allZero = piles.every(check);
-
     return allZero;
 };
