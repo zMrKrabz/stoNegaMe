@@ -6,16 +6,19 @@
         <script src="js/script.js"></script>
     </head>
     <body onload="initialize();">
-        <img src="images/tarven-sign.png" id="tarven-sign"/>
-        <img src="images/knightmare_goblin.png" id="knightmare_goblin"/>
-        <img src="images/green-goblin.jpg" id="green-goblin">
+            <img src="images/tarven-sign.png" id="tarven-sign"/>
+
+        <div id="goblins">
+            <img src="images/knightmare_goblin.png" id="knightmare_goblin"/>
+            <img src="images/green-goblin.jpg" id="green-goblin">
+        </div>
+
+            <img src="images/goblin-slayer.jpg" id="slayerimg" />
 
         <div class="stones">
             <button id="pile1B" class="stonesB" onclick="main('1');"><span id="pile1">3</span> Stones</button>
             <button id="pile2B" class="stonesB" onclick="main('2');"><span id="pile2">3</span> Stones</button>
             <button id="pile3B" class="stonesB" onclick="main('3');"><span id="pile3">3</span> Stones</button>
         </div>
-
-        <img src="images/goblin-slayer.jpg" id="slayerimg" />
     </body>
 </html>
