@@ -62,7 +62,7 @@ function main(ele){
         urk();
 
         testZero();
-        console.log("doodoo");
+        console.log("deedee");
 
     } else {
         console.log("Invalid")
@@ -99,7 +99,7 @@ function urk(){
     };
     pileE(pile).innerHTML=cpile;
     gameOrder.push("urk")
-    dialogue.innerHTML=dialogues[dialogues.indexOf(dialogues[Math.floor(Math.random() * dialogues.length)])];
+    dialogue.innerHTML=dialogues[Math.floor(Math.random() * dialogues.length)];
 };
 
 function testZero(){
@@ -116,18 +116,15 @@ function testZero(){
         console.log(gameOrder[gameOrder.length -2])
         switch(gameOrder[gameOrder.length-2]){
             case 'urk': 
-                dialogue.innerHTML="Hahahhahahaha, for I have won!";
-                console.log("urk")
+                console.log(dialogue.innerHTML="Hahahhahahaha, for I have won!");
+                console.log("urk");
                 break;
             case 'user': 
-                dialogue.innerHTML="Damn, you have won!";
-                console.log("user")
+                console.log(dialogue.innerHTML="Damn, you have won!");
+                console.log("user");
                 break;
-            default: 
-                console.log(gameOrder[gameOrder.length -2])
         };
     };
-    console.log("break here")
 };
 
 function reset(){
