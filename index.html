@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style></style>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script src="js/script.js"></script>
-    </head>
-    <body onload="initialize();">
-            <img src="images/tarven-sign.png" id="tarven-sign"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <div id="goblins">
-            <img src="images/knightmare_goblin.png" id="knightmare_goblin"/>
-            <img src="images/green-goblin.jpg" id="green-goblin">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/script.js"></script>
+    <title>stoNe Game</title>
+</head>
+<body onload="initialize()">
+    <div id="container-parent">
+        <div id="container">
+            <img class="img" id="player" src="images/goblin-slayer.jpg">
+ 
+            <img class="goblin img" id="goblin1" src="images/green-goblin.jpg">
+            <img class="goblin img" id="goblin2" src="images/knightmare_goblin.png">
+ 
+            <div id="dialogue"><p id="dialogue p">Let's play a stone game!</p></div>
+ 
+            <button class="buttons" id="pile1" onclick="main('1')">3</button>
+            <button class="buttons" id="pile2" onclick="main('2')">3</button>
+            <button class="buttons" id="pile3" onclick="main('3')">3</button>
+ 
+            <img id="sign" src="images/tarven-sign.png">
+ 
+            <button class="buttons" id="htp">How to play</button>
+            <button class="buttons" id="reset" onclick="reset();">Reset</button>
         </div>
-
-            <img src="images/goblin-slayer.jpg" id="slayerimg" />
-
-        <div class="stones">
-            <button id="pile1B" class="stonesB" onclick="main('1');"><span id="pile1">3</span> Stones</button>
-            <button id="pile2B" class="stonesB" onclick="main('2');"><span id="pile2">3</span> Stones</button>
-            <button id="pile3B" class="stonesB" onclick="main('3');"><span id="pile3">3</span> Stones</button>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
