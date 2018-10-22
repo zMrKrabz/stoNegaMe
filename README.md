@@ -33,5 +33,4 @@ have to juggle the user’s turn (click and respond) with the computer’s turn 
 display the output as appropriate so that a person playing the game can follow the game.
 
 ## TODO
-* Do a lot more testing
-* Call the arrow functions, to assign the variables. 
+* The testzero(); statement crashes the program when true is returned. 
