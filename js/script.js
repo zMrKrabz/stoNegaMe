@@ -55,15 +55,15 @@ function main(ele){
         pile.innerHTML = cpile;
         gameOrder.push('user');
     
-        console.log(piles);
-        testZero();
-        console.log("doodoo")
-
-        urk();
-
-        testZero();
-        console.log("deedee");
-
+        let final = testZero();
+        if (final) {
+            console.log(final);
+        } else {
+            urk();
+            if (final){
+                console.log(final);
+            };
+        };
     } else {
         console.log("Invalid")
     }
@@ -113,17 +113,12 @@ function testZero(){
     console.log(pilesE);
     
     if (allZero) {
-        console.log(gameOrder[gameOrder.length -2])
-        switch(gameOrder[gameOrder.length-2]){
-            case 'urk': 
-                console.log(dialogue.innerHTML="Hahahhahahaha, for I have won!");
-                console.log("urk");
-                break;
-            case 'user': 
-                console.log(dialogue.innerHTML="Damn, you have won!");
-                console.log("user");
-                break;
+        switch (gameOrder[gameOrder.length -2]){
+            case "user": return dialogue.innerHTML="dang, for you have won!";
+            case "bot": return dialogue.innerHTML="Hahahahha, I have won!";
         };
+    } else {
+        return false;
     };
 };
 
