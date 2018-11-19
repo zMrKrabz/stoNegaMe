@@ -128,3 +128,9 @@ function reset(){
         pilesE[i].innerHTML=3;
     };
 };
+
+function htp(){
+    alert(
+        "How to play\nChoose a pile to select, and click piles until you reach \n The one to empty all piles loses."
+    )
+}
